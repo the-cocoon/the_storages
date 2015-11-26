@@ -1,19 +1,31 @@
 ## TheStorages
 
-Easy file attaching to any AR models
-
-## Installation
-
 ```
-gem 'the_storages'
+rake the_storages_engine:install:migrations
+
+rails g the_storages install
 ```
 
-And then execute:
+```ruby
+class AttachedFile < ActiveRecord::Base
+  include ::TheStorages::AttachedFile
+  include ::TheStorages::Watermarks
+end
+```
 
 ```
-bundle
+class User < ActiveRecord::Base
+  include ::TheStorages::Storage
+  include ::TheStorages::HasAttachedFiles
+end
+
+class Post < ActiveRecord::Base
+  include ::TheStorages::Storage
+end
 ```
 
-## Usage
-
-TODO: Write usage instructions here
+```
+class AttachedFilesController < ApplicationController
+  include ::TheStorages::Controller
+end
+```

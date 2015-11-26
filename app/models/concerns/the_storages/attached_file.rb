@@ -6,8 +6,9 @@ module TheStorages
     extend ActiveSupport::Concern
 
     included do
-      include ImageTools
+      include ::ImageTools
       include ::TheStorages::AttachedFileHelpers
+
       IMAGE_CONTENT_TYPES = TheStorages::AttachedFileHelpers::IMAGE_EXTS.map{ |e| "image/#{ e }" }
 
       def skip_spoof_detection_list
@@ -45,16 +46,16 @@ module TheStorages
       after_commit      :attachment_processing, on: [:create, :update]
 
       # Recalc
-      after_create  :recalculate_storage_counters
-      after_destroy :recalculate_storage_counters
+      # after_create  :recalculate_storage_counters
+      # after_destroy :recalculate_storage_counters
 
       scope :images, ->{ where(attachment_content_type: IMAGE_CONTENT_TYPES)  }
     end
 
     # Recalc
-    def recalculate_storage_counters
-      storage.recalculate_storage_counters!
-    end
+    # def recalculate_storage_counters
+    #   storage.recalculate_storage_counters!
+    # end
 
     # Life cycle
     def generate_file_name
@@ -74,9 +75,9 @@ module TheStorages
         self.image_processing = false
 
         # create_image_versions
-        recalculate_storage_counters
+        # recalculate_storage_counters
       else
-        recalculate_storage_counters
+        # recalculate_storage_counters
       end
     end
 

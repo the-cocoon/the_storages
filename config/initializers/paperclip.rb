@@ -9,7 +9,7 @@ module Paperclip
       attachment.instance.id
     end
 
-    def klass  attachment, style
+    def klass attachment, style
       attachment.instance.class.to_s.downcase
     end
 
@@ -34,6 +34,6 @@ end
 #     return unless instance.need_thumb? rescue nil
 #     post_process_styles_without_validation
 #   end
-
+#
 #   alias_method_chain :post_process_styles, :validation
 # end

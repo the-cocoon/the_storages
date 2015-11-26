@@ -1,4 +1,4 @@
-# include TheStorages::Controller
+# include ::TheStorages::Controller
 module TheStorages
   module Controller
     extend ActiveSupport::Concern
