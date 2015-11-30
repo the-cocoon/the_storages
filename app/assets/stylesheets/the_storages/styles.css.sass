@@ -1,0 +1,43 @@
+// COMMON
+.the-storages
+  &--drug-and-drop-files
+    border: 3px dashed green
+    background: #e8ffb4
+    cursor: move
+
+// SORTABLE LIST
+.the-storages
+  &--list
+    position: relative
+    list-style: none outside none
+
+    li
+      position: relative
+      margin-bottom: 15px
+      list-style: none outside none
+
+  &--handler
+    cursor: move
+
+  &--placeholder
+    background: #4ed740
+    margin-bottom: 15px
+    border-radius: 3px
+
+  &--sortable-error
+    background: red
+
+  &--nested-set
+    margin: 15px 0 0 15px
+    border-left: 1px dashed #bbb
+    list-style: none outside none
+
+    li
+      margin: 0 0 15px 15px
+
+  &--file-ext
+    width: 100px
+    height: 100px
+    border-radius: 3px
+    border: 1px solid lightgray
+    background: image-url("content_types/default.jpg") no-repeat center center transparent

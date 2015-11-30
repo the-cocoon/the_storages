@@ -7,9 +7,9 @@ module TheStorages
       IMAGE_EXTS.include? TheStorages.file_ext(attachment_file_name)
     end
 
-    def file_css_class
-      'f_' + TheStorages.file_ext(attachment_file_name)
-    end
+    # def file_css_class
+    #   TheStorages.file_ext(attachment_file_name)
+    # end
 
     def title
       attachment_file_name
@@ -32,7 +32,7 @@ module TheStorages
     end
 
     def mb_size
-      FileSizeHelper.mb_size(attachment_file_size)
+      ::FileSizeHelper.mb_size(attachment_file_size)
     end
 
     def path style = nil

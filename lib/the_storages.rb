@@ -1,5 +1,6 @@
 require 'haml'
 require 'slim'
+require 'log_js'
 require 'paperclip'
 require 'image_tools'
 require 'to_slug_param'

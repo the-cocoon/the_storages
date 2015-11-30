@@ -1,5 +1,7 @@
 ru:
   the_storages:
+    file_size_helper:
+      mb: Мбайт
     list:
       files_list: 'Прикрепленные файлы:'
     form:

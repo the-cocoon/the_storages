@@ -1,0 +1,16 @@
+.ptz--form-0
+  = form_for AttachedFile.new, multipart: true, html: { multipart: true } do |f|
+    .m20
+      .mb15.fs15 Загрузить файлы
+
+      = hidden_field_tag 'storage_id',   storage.to_param
+      = hidden_field_tag 'storage_type', storage.class
+
+      .table.mb30
+        .row
+          .cell.vam.pr15
+            = file_field_tag 'files[]', class: 'ptz--input test_multi', multiple: true, autocomplete: :off, data: { role: 'the-storages--multiple-upload-input' }
+          .cell.vam.fs15 &mdash; Выбрать файлы на компьютере
+
+      .the-storages--drug-and-drop-files.p20.fs15@the-storages--drug-and-drop-files
+        | Перетащите сюда необходимые файлы

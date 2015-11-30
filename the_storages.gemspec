@@ -20,6 +20,7 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency 'slim'
   spec.add_dependency 'haml'
+  spec.add_dependency 'log_js'
   spec.add_dependency 'paperclip'
   spec.add_dependency 'image_tools'
   spec.add_dependency 'to_slug_param'
