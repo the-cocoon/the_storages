@@ -6,8 +6,6 @@ json.set! :flash, {
 
 json.set! :html_content, {
   append: {
-    selectors: {
-      '.attached_files_list' => sortable_tree(@new_file, render_module: AttachedFilesListHelper)
-    }
+    '.the-storages--list' => sortable_tree(@new_file, render_module: AttachedFilesListHelper)
   }
 }

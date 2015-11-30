@@ -1,5 +1,17 @@
 ru:
+  activerecord:
+    models:
+      attached_file: Файл
+    attributes:
+      attached_file:
+        attachment: Файл
+        attachment_file_name: Файл
+        attachment_file_size: Файл
+
   the_storages:
+    validation:
+      uniq_attachment_file_name: У файла должно быть уникальное имя
+      attachment_file_size: не соответствующий размер
     file_size_helper:
       mb: Мбайт
     list:

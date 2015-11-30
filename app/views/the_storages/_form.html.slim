@@ -1,7 +1,8 @@
 .ptz--form-0
   = form_for AttachedFile.new, multipart: true, html: { multipart: true } do |f|
-    .m20
+    .m20.posrel
       .mb15.fs15 Загрузить файлы
+      .the-storages--uploading-percent.fs15
 
       = hidden_field_tag 'storage_id',   storage.to_param
       = hidden_field_tag 'storage_type', storage.class

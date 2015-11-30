@@ -20,15 +20,17 @@ module TheStorages
 
         render template: json_response('create.success')
       else
-        render template: json_response('create.errors')
+        render template: json_response('create.errors'), status: 422
       end
     end
 
     def destroy
-      attachment = ::AttachedFile.find(params[:id])
-      attachment.destroy_versions
-      attachment.destroy
-      redirect_to [ request.referer, :files ].join('#')
+      @attachment = ::AttachedFile.find(params[:id])
+      @attachment.destroy_versions
+      @attachment.destroy
+
+      render template: json_response('destroy.success')
+      # redirect_to [ request.referer, :files ].join('#')
     end
 
     private

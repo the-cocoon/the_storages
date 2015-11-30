@@ -34,9 +34,8 @@ module AttachedFilesListHelper
                   </div>
 
                   <div class='cell pl20'>
-                    <div class='the-storages--handler'>
-                      <i class='fa fa-arrows fs16'></i>
-                    </div>
+                    #{ handler }
+                    #{ delete }
                   </div>
                 </div>
               </div>
@@ -95,6 +94,18 @@ module AttachedFilesListHelper
 
       def show_size
         "<div class='fs12'>#{ @node.mb_size }</div>"
+      end
+
+      def handler
+        "<div class='the-storages--handler mb20'>
+          <i class='fa fa-arrows fs16'></i>
+        </div>"
+      end
+
+      def delete
+        "<div class='the-storages--delete tac'>
+          #{ h.link_to '', @node, class: 'fa fa-trash-o fs14 the-storages--delete-attachment', method: :delete, data: { remote: true, confirm: 'Вы действительно хотите удалить этот файл?' } }
+        </div>"
       end
 
       def children

@@ -1,6 +1,8 @@
 @TheStoragesFileUploader = do ->
   init: ->
-    log 'INIT!'
+    @inited ||= do ->
+      $(document).on 'ajax:success', '.the-storages--delete-attachment', (xhr, data, status) ->
+        JODY.processor(data)
 
     $('@the-storages--multiple-upload-input').fileupload
       type:      'POST'
@@ -13,22 +15,18 @@
 
       done: (e, uploader) ->
         data = uploader.result
-        # JODY.processor(data)
+        JODY.processor(data)
 
       fail: (e, uploader) ->
         [ xhr, response, status ] = [ null, uploader.jqXHR, uploader.textStatus ]
-        # JODY.error_processor(xhr, response, status)
-        log response
+        JODY.error_processor(xhr, response, status)
 
       progressall: (e, data) ->
         progress = parseInt data.loaded / data.total * 100, 10
-        # progress_bar   = $('@files-uploading-progress-bar')
-        log progress
+        holder   = $('.the-storages--uploading-percent')
 
-        # if progress < 100
-        #   size = "#{ progress }%"
-        #   progress_bar.show()
-        #   progress_bar.css { width: size }
-        # else
-        #   progress_bar.hide()
-        #   progress_bar.css { width: '1%' }
+        if progress < 100
+          size = "#{ progress }%"
+          holder.html size
+        else
+          holder.html ''
