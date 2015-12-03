@@ -20,7 +20,7 @@ module AttachedFilesListHelper
 
         "
           <li data-node-id='#{ @node.id }'>
-            <div class='the-storages--item ptz--div-0'>
+            <div class='the-storages--item ptz--div-0 p15'>
               <div class='table'>
                 <div class='row'>
                   <div class='cell pr20'>
