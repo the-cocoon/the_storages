@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.version       = TheStorages::VERSION
   spec.authors       = ["Ilya N. Zykin"]
   spec.email         = ["zykin-ilya@ya.ru"]
-  spec.description   = %q{TheStorages - act as file storage }
+  spec.description   = %q{TheStorages - act as file storage}
   spec.summary       = %q{easy file attaching to any AR Model}
   spec.homepage      = "https://github.com/the-teacher"
   spec.license       = "MIT"

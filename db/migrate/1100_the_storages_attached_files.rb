@@ -1,4 +1,4 @@
-class AttachedFiles < ActiveRecord::Migration
+class TheStoragesAttachedFiles < ActiveRecord::Migration
   def change
     create_table :attached_files do |t|
       t.integer :user_id
@@ -12,7 +12,7 @@ class AttachedFiles < ActiveRecord::Migration
 
       # images delayed processing status
       t.string  :processing, default: :none
-      
+
       # watermark
       t.boolean :watermark,      default: false
       t.string  :watermark_text, default: ''
