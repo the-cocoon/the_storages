@@ -7,11 +7,11 @@
       = hidden_field_tag 'storage_id',   storage.to_param
       = hidden_field_tag 'storage_type', storage.class
 
-      .table.mb30
-        .row
-          .cell.vam.pr15
+      .ptz--table.mb30
+        .ptz--tr
+          .ptz--td.vam.pr15
             = file_field_tag 'files[]', class: 'ptz--input test_multi', multiple: true, autocomplete: :off, data: { role: 'the-storages--multiple-upload-input' }
-          .cell.vam.fs15 &mdash; Выбрать файлы на компьютере
+          .ptz--td.vam.fs15 &mdash; Выбрать файлы на компьютере
 
       .the-storages--drug-and-drop-files.p30.fs15@the-storages--drug-and-drop-files
         | Перетащите сюда необходимые файлы
