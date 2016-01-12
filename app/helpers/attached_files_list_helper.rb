@@ -21,19 +21,19 @@ module AttachedFilesListHelper
         "
           <li data-node-id='#{ @node.id }'>
             <div class='the-storages--item ptz--div-0 p15'>
-              <div class='table'>
-                <div class='row'>
-                  <div class='cell pr20'>
+              <div class='ptz--table'>
+                <div class='ptz--tr'>
+                  <div class='ptz--td pr20'>
                     #{ build_preview_pic }
                   </div>
 
-                  <div class='cell vat w100p'>
+                  <div class='ptz--td vat w100p'>
                     #{ url_input }
                     #{ show_link }
                     #{ show_size }
                   </div>
 
-                  <div class='cell pl20'>
+                  <div class='ptz--td pl20'>
                     #{ handler }
                     #{ delete }
                   </div>
