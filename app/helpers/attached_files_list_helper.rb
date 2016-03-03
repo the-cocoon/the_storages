@@ -86,10 +86,12 @@ module AttachedFilesListHelper
       def show_link
         node = options[:node]
         ns   = options[:namespace]
+
         title_field = options[:title]
-        title = node.send(title_field)
-        url = @node.is_image? ? @node.url(:base) : @node.url
-        "<div class='fs14 mb10'>#{ h.link_to(title, url) }</div>"
+        title       = node.send(title_field)
+        url         = @node.is_image? ? @node.url(:base) : @node.url
+        link_text   = h.truncate(title.to_s, length: 80, omission: '...')
+        "<div class='fs14 mb10'>#{ h.link_to(link_text, url, title: title) }</div>"
       end
 
       def show_size
