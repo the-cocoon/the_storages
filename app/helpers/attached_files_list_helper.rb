@@ -20,20 +20,20 @@ module AttachedFilesListHelper
 
         "
           <li data-node-id='#{ @node.id }'>
-            <div class='the-storages--item ptz--div-0 p15'>
-              <div class='ptz--table'>
-                <div class='ptz--tr'>
-                  <div class='ptz--td pr20'>
+            <div class='the-storages--item ptz_div-0 p15'>
+              <div class='ptz_table'>
+                <div class='ptz_tr'>
+                  <div class='ptz_td pr20'>
                     #{ build_preview_pic }
                   </div>
 
-                  <div class='ptz--td vat w100p'>
+                  <div class='ptz_td vat w100p'>
                     #{ url_input }
                     #{ show_link }
                     #{ show_size }
                   </div>
 
-                  <div class='ptz--td pl20'>
+                  <div class='ptz_td pl20'>
                     #{ handler }
                     #{ delete }
                   </div>
@@ -77,7 +77,7 @@ module AttachedFilesListHelper
               URL:
             </div>
             <div class='cell w100p'>
-              <input class='ptz--input ptz--size-13 w100p' type='text' value='#{ current_host + url }'>
+              <input class='ptz_input ptz_size-13 w100p' type='text' value='#{ current_host + url }'>
             </div>
           </div>
         </div>"

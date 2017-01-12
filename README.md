@@ -74,7 +74,7 @@ link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css
 VIEW
 
 ```
-.w800.mt20.mb20.ptz--theme-0
+.w800.mt20.mb20.ptz_theme-0
   .mb20= render partial: 'the_storages/form', locals: { storage: @pub }
   = render partial: 'the_storages/list', locals: { storage: @pub }
 ```
