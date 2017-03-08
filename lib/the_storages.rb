@@ -1,10 +1,9 @@
-require 'haml'
 require 'slim'
 require 'log_js'
 require 'paperclip'
 require 'image_tools'
-require 'to_slug_param'
 require 'the_sortable_tree'
+require 'the_string_to_slug'
 
 require 'the_storages/config'
 require 'the_storages/version'

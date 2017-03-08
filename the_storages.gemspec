@@ -19,12 +19,11 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency 'slim'
-  spec.add_dependency 'haml'
   spec.add_dependency 'log_js'
   spec.add_dependency 'paperclip'
   spec.add_dependency 'image_tools'
-  spec.add_dependency 'to_slug_param'
   spec.add_dependency 'the_sortable_tree'
+  spec.add_dependency 'the_string_to_slug'
 
   spec.add_development_dependency "bundler", "~> 1.3"
   spec.add_development_dependency "rake"
